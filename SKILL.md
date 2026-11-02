@@ -49,9 +49,20 @@ version: "2.0.0"
 
 四个变量填完 → 进 Step 2。任一填不出来 → **先让用户去查，不要猜**。
 
-### Step 2 定性：四条路径选一条
+### Step 2 认场景，再定性
 
-按 `references/decision.md` 的四变量表，输出：
+**先认场景**（`references/scenarios.md`，六类，一句话就能对号）：
+
+| 用户第一句 | 场景 | 打法入口 |
+|---|---|---|
+| "年费 / 买了几个月" | S1 年费会员 | 按未兑付部分退 |
+| "忘了取消 / 又扣了" | S2 自动续费 | 先解约，再要当期 |
+| "课 / 训练营 / 老师" | S3 课程 | 找收款机构，不找平台 |
+| "办卡 / 充值 / 门店" | S4 预付卡 | 先取证，再谈 |
+| "模板 / 素材 / 软件" | S5 虚拟商品 | 打"未交付/瑕疵"，别打七天无理由 |
+| "快递 / 收到货" | S6 实体商品 | 这才是七天无理由 |
+
+**再定路径**（`references/decision.md`）：
 
 - **A 全额退**（未使用 + 未超期 + 有依据）
 - **B 按比例退**（已部分使用）
@@ -98,17 +109,22 @@ version: "2.0.0"
 
 | 用户情况 | 去哪（路径相对本文件） |
 |---|---|
-| 不知道从哪下手 | `references/platforms/INDEX.md`（12 个平台一览 + 一句话规律） |
+| 不知道从哪下手 | `references/scenarios.md`（六类场景，一句话对号） |
+| 想看某平台能不能退 | `references/platforms/INDEX.md`（12 个平台一览） |
 | 扣子 / coze.cn 会员 | `references/platforms/coze.md`（唯一 `实测`，可自动化） |
 | iOS 内购、Apple 订阅 | `references/platforms/apple.md` + `references/channels.md` Apple 段 |
 | 知识星球 / 知乎 / 得到 / 小鹅通 / 剪映 / WPS / 网盘 / 视频 / 音频 | `references/platforms/` 下对应卡片 |
 | 其他平台会员/课程 | `references/platforms/` 找卡；没有 → 按 `references/decision.md` 走指导版 |
-| 自动续费已扣款 | `references/decision.md` 变量二 + `references/channels.md` 支付渠道段 |
-| 要引用法条 | `references/legal.md`（先看"哪条真能用"那张表） |
+| 自动续费已扣款 | `templates/auto-renewal.md`（先解约，再要当期） |
+| 课程 / 训练营 | `templates/course-refund.md` |
+| 软件 / 模板 / 素材 / 额度包 | `templates/digital-goods.md` |
 | 线下预付卡/健身房/教培 | `templates/offline-prepaid.md` |
+| 要引用法条 | `references/legal.md`（先看"哪条真能用"那张表） |
 | 被拒后要升级 | `references/channels.md` 渠道顺序 |
 | 要一段能直接复制的话 | `references/scripts.md` |
 | 要一封正式申请 | `templates/formal-request.md` |
+| 想看完整输出长什么样 | `examples/README.md`（两个案例） |
+| 想接某个平台的自动化 | `references/automation-roadmap.md`（优先级 + 技术前提） |
 
 ---
 

@@ -35,14 +35,17 @@ Agent 会先问你四个问题（谁收的钱、买的什么、用了多少、�
 
 | 文件 | 作用 |
 |---|---|
-| `SKILL.md` | 主流程：五步走 + 路由表 + 输出契约 |
+| `SKILL.md` | 主流程：四变量 → 认场景 → 定路径 → 选模式 → 取证 → 回写 |
+| `references/scenarios.md` | 六大场景：年费 / 自动续费 / 课程 / 预付卡 / 虚拟商品 / 实体 |
 | `references/decision.md` | 决策框架：四个变量、四条路径、五个高频错误 |
 | `references/legal.md` | 法规依据：哪些条款真能当依据用 |
-| `references/channels.md` | 渠道升级顺序：客服 → 工单 → 12315 → 支付争议 |
+| `references/channels.md` | 渠道升级顺序：客服 → 支付争议 → 12315 → 诉讼 |
 | `references/scripts.md` | 话术库：一句话怎么说，以及禁忌词替换表 |
 | `references/human-ops.md` | ego-lite 拟人化执行规范：怎么不被识别成 AI |
+| `references/automation-roadmap.md` | 自动化优先级：12 个平台里只有 3 个值得做 |
 | `references/platforms/` | 平台卡：入口在哪、条款怎么说、客服叫什么 |
-| `templates/` | 可直接提交的正式文本：邮件、12315、支付争议、预付卡 |
+| `templates/` | 可直接提交的正式文本：自动续费、课程、虚拟商品、邮件、12315、支付争议、预付卡 |
+| `examples/` | 两个完整案例，看输出长什么样 |
 
 ## 边界（重要）
 
