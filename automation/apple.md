@@ -23,6 +23,8 @@ console.log(await page.snapshot());
 ```
 
 > 这里允许直达：reportaproblem 本身就是入口页，不存在"深链暴露"问题。
+>
+> **入口核验（2026-11-02 实测）**：未登录时直接访问会 302 跳转到 `idmsa.apple.com` 的 Apple ID 登录页——**不登录根本到不了退款流程**，这正是下一步必须 `handOff` 的原因。
 
 ### 1. 登录（必须交还用户）
 
