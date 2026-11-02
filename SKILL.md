@@ -2,7 +2,7 @@
 name: lhg_refund
 slug: lhg-refund
 displayName: 全平台退费助手
-version: 2.1.0
+version: 2.1.1
 summary: 年费、自动续费、课程、预付卡、虚拟商品，不管在哪个平台想退费，先判四要素再选路径，附 12 平台专属话术与人工申请模板。
 description: 全平台退费助手：先判四要素（支付主体/付费形态/消耗程度/条款提示），再按渠道顺序处理，给出可复制话术与人工申请模板。扣子(coze.cn)为已实测自动化模块；iOS 内购、苹果渠道、预付卡等走对应专项模块；未覆盖平台走指导版。
 license: MIT
