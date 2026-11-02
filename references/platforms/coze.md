@@ -30,7 +30,7 @@ notes: "退款金额按订单剩余价值计算；提交后立即收回全部剩
 status: 实测
 last_verified: 2026-10-12
 sources:
-  - https://github.com/lhg-skills/lhg-coze-refund （原 skill 实测记录）
+  - https://github.com/lhg-skills/lhg-refund （v1 实测记录，见本仓库历史）
 ```
 
 ## 为什么用户自己找不到
