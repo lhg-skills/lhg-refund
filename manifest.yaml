@@ -2,7 +2,7 @@
 slug: lhg-refund
 display_name: 全平台退费助手
 description: 不管在哪个平台、买的哪种付费、卡在哪一步，给出可执行的方法 + 可直接发的话术。先判四要素（支付主体/付费形态/消耗程度/条款提示），再选四条路径（全额退/按比例退/置换/止损），按渠道顺序升级；含 ego-lite 拟人化执行规范与人工申请模板库。扣子(coze.cn)为已实测自动化模块。
-version: 2.0.0
+version: 2.1.0
 author: 刘洪光
 license: MIT
 ---

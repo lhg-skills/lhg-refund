@@ -40,10 +40,12 @@ Agent 会先问你四个问题（谁收的钱、买的什么、用了多少、�
 | `references/decision.md` | 决策框架：四个变量、四条路径、五个高频错误 |
 | `references/legal.md` | 法规依据：哪些条款真能当依据用 |
 | `references/channels.md` | 渠道升级顺序：客服 → 支付争议 → 12315 → 诉讼 |
-| `references/scripts.md` | 话术库：一句话怎么说，以及禁忌词替换表 |
+| `references/scripts.md` | 话术库：通用句式与禁忌词替换表 |
+| `references/platform-scripts.md` | **12 个平台专属话术**，照抄就能发 |
 | `references/human-ops.md` | ego-lite 拟人化执行规范：怎么不被识别成 AI |
 | `references/automation-roadmap.md` | 自动化优先级：12 个平台里只有 3 个值得做 |
 | `references/platforms/` | 平台卡：入口在哪、条款怎么说、客服叫什么 |
+| `automation/` | 三个平台的执行手册：扣子（全自动）、Apple、WPS（半自动） |
 | `templates/` | 可直接提交的正式文本：自动续费、课程、虚拟商品、邮件、12315、支付争议、预付卡 |
 | `examples/` | 两个完整案例，看输出长什么样 |
 
@@ -58,13 +60,17 @@ Agent 会先问你四个问题（谁收的钱、买的什么、用了多少、�
 
 | 平台 | 状态 | 能到什么程度 |
 |---|---|---|
-| 扣子 Coze（coze.cn） | ✅ 实测 | 可自动化，全流程走通 |
-| 知识星球 / 知乎盐选 / 得到 / 小鹅通 | 🟡 官方政策已核实 | 指导版 + 话术 |
-| 剪映 / WPS / 百度网盘 / 腾讯视频 / 爱奇艺 / 喜马拉雅 | 🟡 官方政策已核实 | 指导版 + 话术 |
-| Apple App Store | 🟡 官方政策已核实 | 指导版 + reportaproblem 路径 |
+| 扣子 Coze（coze.cn） | ✅ 实测 | **全自动**，全流程走通（`automation/coze.md`） |
+| Apple App Store | 🟢 手册就绪 | **半自动**，登录与提交交给用户（`automation/apple.md`） |
+| WPS | 🟢 手册就绪 | **半自动**，走"买错会员"通道（`automation/wps.md`） |
+| 知识星球 / 知乎盐选 / 得到 / 小鹅通 | 🟡 政策已核实 | 指导版 + 平台专属话术 |
+| 剪映 / 百度网盘 / 腾讯视频 / 爱奇艺 / 喜马拉雅 | 🟡 政策已核实 | 指导版 + 平台专属话术 |
 | 其他平台 | ⚪ 待补 | 按四变量框架走指导版 |
 
-详见 `references/platforms/INDEX.md`。
+12 个平台的**专属话术**在 `references/platform-scripts.md`，照抄就能发。
+平台卡在 `references/platforms/`，政策与入口详见其 `INDEX.md`。
+
+> Apple 与 WPS 的执行手册依据官方文档写成，**尚未真机跑通**——首次执行后请把实际页面文案回写到手册末尾的"待验证项"。
 
 平台卡按 `references/platforms/_schema.md` 填，新增平台不改主流程。
 

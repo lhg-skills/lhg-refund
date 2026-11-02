@@ -1,7 +1,7 @@
 ---
 name: "lhg_refund"
 description: "全平台退费助手：先判四要素（支付主体/付费形态/消耗程度/条款提示），再按渠道顺序处理，给出可复制话术与人工申请模板。扣子(coze.cn)为已实测自动化模块；iOS 内购、苹果渠道、预付卡等走对应专项模块；未覆盖平台走指导版。"
-version: "2.0.0"
+version: "2.1.0"
 ---
 
 # 全平台退费助手
@@ -75,11 +75,13 @@ version: "2.0.0"
 
 | 模式 | 什么时候用 | 做什么 |
 |---|---|---|
-| **A 自动化版** | 平台卡 `status: 实测`，且用户本人在场 | 用 ego-lite 打开页面、导航、走到确认弹窗前，用户确认后提交。按 `references/human-ops.md` 执行 |
-| **B 半自动版** | 有明确网页入口，但流程可能改版 | agent 打开页面并导航到关键节点，把屏幕交给用户自己点。**改版风险高时优先这个** |
+| **A 全自动** | `automation/` 下有对应平台手册，且该手册标为全自动，用户本人在场 | 按手册逐步执行；拟人规范见 `references/human-ops.md` |
+| **B 半自动** | 有网页入口，但登录/提交必须用户做（Apple、WPS） | agent 导航 + 填表，**登录和最终提交交给用户** |
 | **C 指导版** | 只有 App 入口 / 入口在客服对话里 / 平台未覆盖 | 输出分步操作指引 + 话术，用户自己点，每步回来报结果 |
 
 选择顺序：**A → B → C**，能 A 就 A，不能 A 就 B，别硬上。
+
+**已有的执行手册**：`automation/coze.md`（全自动）、`automation/apple.md`、`automation/wps.md`（半自动）。没有手册的平台走 C。
 
 ### Step 4 执行 + 取证
 
@@ -121,9 +123,12 @@ version: "2.0.0"
 | 线下预付卡/健身房/教培 | `templates/offline-prepaid.md` |
 | 要引用法条 | `references/legal.md`（先看"哪条真能用"那张表） |
 | 被拒后要升级 | `references/channels.md` 渠道顺序 |
-| 要一段能直接复制的话 | `references/scripts.md` |
+| 要一段能直接复制的话 | `references/scripts.md`（通用）/ `references/platform-scripts.md`（按平台） |
 | 要一封正式申请 | `templates/formal-request.md` |
-| 想看完整输出长什么样 | `examples/README.md`（两个案例） |
+| 要看完整输出长什么样 | `examples/README.md`（两个案例） |
+| 要跑扣子自动化 | `automation/coze.md` |
+| 要跑 Apple 退款 | `automation/apple.md` |
+| 要跑 WPS 退款 | `automation/wps.md` |
 | 想接某个平台的自动化 | `references/automation-roadmap.md`（优先级 + 技术前提） |
 
 ---
